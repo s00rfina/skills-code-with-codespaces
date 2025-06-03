@@ -1,9 +1,27 @@
 {
-  // Name this configuration
+  // Configuration name
   "name": "Codespace for Skills!",
-  // Use the base codespace image
+
+  // Base image for the dev container
   "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
 
+  // Default user for the container
   "remoteUser": "codespace",
-  "overrideCommand": false
+
+  // Use the default command defined in the image
+  "overrideCommand": false,
+
+  // Customizations for VS Code and Codespaces
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot"
+      ]
+    },
+    "codespaces": {
+      "openFiles": [
+        "codespace.md"
+      ]
+    }
+  }
 }
